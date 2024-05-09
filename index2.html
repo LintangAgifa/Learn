@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="judul1">
+        <h1>Ini adalah judul</h1>
+    </div>
+    <div class="judul2">
+        <h1>Ini adalah judul 2</h1>
+    </div>
+
+
+    <table class="judul" id="TabelSatu" border="1" width="50%">
+        <tr>
+            <th>
+                number
+            </th>
+            <th>
+                name
+            </th>
+            <th>
+                address
+            </th>
+            <th>
+                city
+            </th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Fulan</td>
+            <td>Jln. Pemekaran</td>
+            <td>Solo</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Fulanah</td>
+            <td colspan="2">Jln. Pahlawan</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td colspan="3">Fulani</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Fulana</td>
+
+        </tr>
+    </table>
+    <button id="showhide">showhide</button>
+
+    <br><br><br>
+    <form action="test.php" style="padding-top: 100px;" method="post">
+        Nama :
+        <input type="text" name="nama"> <br>
+        Umur :
+        <input type="text" name="umur"> <br>
+        Alamat :
+        <input type="text" name="alamat"> <br>
+        <button type="submit">Submit</button>
+    </form>
+    <br><br><br>
+    Angka 1
+    <input type="number" id="satu"> <br>
+    Angka 2
+    <input type="number" id="dua"> <br>
+    <button type="button" id="calculate">Kalikan</button> <br>
+    Hasil <input type="text" id="result">
+    <br><br><br>
+    <img src="bonchu.jpeg" alt="bonchu" srcset="" width="30%">
+    <br>
+    <img src="https://qph.cf2.quoracdn.net/main-qimg-ba82a3f6e15d968a56194a4392a3aada-lq" alt="" srcset="">
+</body>
+<script
+src="https://code.jquery.com/jquery-3.7.1.js"
+integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+crossorigin="anonymous"></script>
+<script>
+    // dijalankan ketika halaman website telah di load semua
+    $(document).ready(function () {
+        //ketika tombol kalikan di tekan
+        $("#calculate").click(function () {
+            //mengambil data id satu
+            var a = $("#satu").val();
+            var b = $("#dua").val();
+            $("#result").val(a*b);
+            alert(a)
+        });
+        $("#showhide").click(function () {
+            $("#TabelSatu").fadeToggle();
+        });
+    });
+</script>
+
+</html>
